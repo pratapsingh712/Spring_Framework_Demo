@@ -4,6 +4,10 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien" class="org.raghav.Alien"></bean>
+    <bean id="alien" class="org.raghav.Alien">
+    </bean>
+
+    <bean id="laptop" class="org.raghav.Laptop">
+    </bean>
 
 </beans>
