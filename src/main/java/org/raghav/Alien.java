@@ -14,12 +14,16 @@ public class Alien {
         System.out.println("Objected created:");
     }
 
-//    @ConstructorProperties({"age","lap"})
+    public Alien(int age, Computer com) {
+        this.age = age;
+        this.com = com;
+    }
+
+    //    @ConstructorProperties({"age","lap"})
 //    public Alien(int age, Laptop lap) {
 //        this.age = age;
 //        this.lap = lap;
 //    }
-
 
     public Computer getCom() {
         return com;

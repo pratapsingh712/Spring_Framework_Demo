@@ -7,7 +7,21 @@
 <!--    <bean id="alien" class="org.raghav.Alien" scope = "prototype">-->
 <!--    </bean>-->
 
-    <bean id="alien" class="org.raghav.Alien">
+    <bean id="alien" class="org.raghav.Alien" autowire="byName">
+
+        <property name="age" value="21"/>
+
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="com" ref="laptop"/>-->
+
+    </bean>
+
+<!--    <bean id="com" class="org.raghav.Desktop">-->
+<!--    </bean>-->
+
+    <bean id="com" class="org.raghav.Laptop">
+    </bean>
+
 <!--        <property name="age" value="21"></property> -> this is used for setter injection-->
 <!--        <constructor-arg type="org.raghav.Laptop" ref="laptop"/>-->
 
@@ -17,17 +31,6 @@
 <!--        <constructor-arg index="1" ref="laptop"/>-->
 <!--        <constructor-arg index="0" value="21"/>-->
 
-        <constructor-arg name="lap" ref="laptop"/>
-
-        <constructor-arg name="age" value="21"/>
-
 <!--        <property name="lap" ref="laptop"/>-->
-    </bean>
-
-    <bean id="laptop" class="org.raghav.Laptop">
-    </bean>
-
-    <bean id="laptop1" class="org.raghav.Laptop">
-    </bean>
 
 </beans>
