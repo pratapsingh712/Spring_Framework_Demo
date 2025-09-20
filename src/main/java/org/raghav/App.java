@@ -10,7 +10,7 @@ public class App
     {
 //        System.out.println( "Hello World!" );
 
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml"); // this line create the container for me
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml"); // this line create the container for me and applicationContext is an interface
         Alien obj = applicationContext.getBean("alien",Alien.class);
 //        obj.setAge(25); using this i am trying to override the property already set for age in the spring.xml
         System.out.println(obj.getAge());
