@@ -11,7 +11,7 @@ public class Alien {
     private Computer com;
 
     public Alien(){
-        System.out.println("Objected created:");
+        System.out.println("Alien Objected created:");
     }
 
     public Alien(int age, Computer com) {
