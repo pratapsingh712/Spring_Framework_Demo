@@ -8,11 +8,16 @@
 <!--    </bean>-->
 
     <bean id="alien" class="org.raghav.Alien">
-        <property name="age" value="21"></property>
-        <property name="lap" ref="laptop"></property>
+<!--        <property name="age" value="21"></property> -> this is used for setter injection-->
+        <constructor-arg value = "21"/>
+<!--        <property name="lap" ref="laptop"/>-->
+        <constructor-arg ref="laptop"/>
     </bean>
 
     <bean id="laptop" class="org.raghav.Laptop">
+    </bean>
+
+    <bean id="laptop1" class="org.raghav.Laptop">
     </bean>
 
 </beans>
