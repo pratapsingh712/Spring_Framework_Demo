@@ -1,5 +1,7 @@
 package org.raghav;
 
+import java.beans.ConstructorProperties;
+
 public class Alien {
 
     private int age;
@@ -10,6 +12,7 @@ public class Alien {
         System.out.println("Objected created:");
     }
 
+    @ConstructorProperties({"age","lap"})
     public Alien(int age, Laptop lap) {
         this.age = age;
         this.lap = lap;
