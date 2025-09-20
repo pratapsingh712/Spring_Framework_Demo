@@ -9,9 +9,10 @@
 
     <bean id="alien" class="org.raghav.Alien">
         <property name="age" value="21"></property>
+        <property name="lap" ref="laptop"></property>
     </bean>
 
-    <bean id="laptop" class="org.raghav.Laptop" scope = "prototype">
+    <bean id="laptop" class="org.raghav.Laptop">
     </bean>
 
 </beans>

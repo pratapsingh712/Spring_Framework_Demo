@@ -3,10 +3,7 @@ package org.raghav;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
@@ -15,7 +12,7 @@ public class App
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml"); // this line create the container for me
         Alien obj = (Alien) applicationContext.getBean("alien");
-        obj.setAge(25);
+//        obj.setAge(25); using this i am trying to override the property already set for age in the spring.xml
         System.out.println(obj.getAge());
         obj.code();
 

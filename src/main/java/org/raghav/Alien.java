@@ -2,7 +2,9 @@ package org.raghav;
 
 public class Alien {
 
-    int age;
+    private int age;
+//    private Laptop lap = new Laptop(); I don't want to create object by myself so I have set the property in the spring.xml for laptop as ref type
+    private Laptop lap;
 
     public int getAge() {
         return age;
@@ -17,7 +19,16 @@ public class Alien {
         System.out.println("Objected created:");
     }
 
+    public Laptop getLap() {
+        return lap;
+    }
+
+    public void setLap(Laptop lap) {
+        this.lap = lap;
+    }
+
     public void code(){
         System.out.println("Coding!");
+        lap.compile();
     }
 }
