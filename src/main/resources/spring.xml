@@ -4,10 +4,14 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien" class="org.raghav.Alien" scope = "prototype">
+<!--    <bean id="alien" class="org.raghav.Alien" scope = "prototype">-->
+<!--    </bean>-->
+
+    <bean id="alien" class="org.raghav.Alien">
+        <property name="age" value="21"></property>
     </bean>
 
-    <bean id="laptop" class="org.raghav.Laptop">
+    <bean id="laptop" class="org.raghav.Laptop" scope = "prototype">
     </bean>
 
 </beans>
