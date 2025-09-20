@@ -9,9 +9,11 @@
 
     <bean id="alien" class="org.raghav.Alien">
 <!--        <property name="age" value="21"></property> -> this is used for setter injection-->
-        <constructor-arg value = "21"/>
+        <constructor-arg type="org.raghav.Laptop" ref="laptop"/>
+
+        <constructor-arg type="int" value = "21"/>
+
 <!--        <property name="lap" ref="laptop"/>-->
-        <constructor-arg ref="laptop"/>
     </bean>
 
     <bean id="laptop" class="org.raghav.Laptop">
