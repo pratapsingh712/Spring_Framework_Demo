@@ -6,16 +6,27 @@ public class Alien {
 
     private int age;
 //    private Laptop lap = new Laptop(); I don't want to create object by myself so I have set the property in the spring.xml for laptop as ref type
-    private Laptop lap;
+//    private Laptop lap;
+
+    private Computer com;
 
     public Alien(){
         System.out.println("Objected created:");
     }
 
-    @ConstructorProperties({"age","lap"})
-    public Alien(int age, Laptop lap) {
-        this.age = age;
-        this.lap = lap;
+//    @ConstructorProperties({"age","lap"})
+//    public Alien(int age, Laptop lap) {
+//        this.age = age;
+//        this.lap = lap;
+//    }
+
+
+    public Computer getCom() {
+        return com;
+    }
+
+    public void setCom(Computer com) {
+        this.com = com;
     }
 
     public int getAge() {
@@ -27,16 +38,9 @@ public class Alien {
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
-    }
-
-    public void setLap(Laptop lap) {
-        this.lap = lap;
-    }
 
     public void code(){
         System.out.println("Coding!");
-        lap.compile();
+        com.compile();
     }
 }
