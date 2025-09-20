@@ -9,11 +9,15 @@
 
     <bean id="alien" class="org.raghav.Alien" autowire="byType">
         <property name="age" value="21"/>
-        <property name="com" ref="com"/>
+        <property name="com">
+            <bean id="com" class="org.raghav.Laptop" primary="true">
+            </bean>
+        </property>
+<!--        <property name="com" ref="com"/> we removed this and use and used inner bean concept above-->
     </bean>
 
-    <bean id="com" class="org.raghav.Laptop" primary="true">
-    </bean>
+<!--    <bean id="com" class="org.raghav.Laptop" primary="true">-->
+<!--    </bean>-->
 
     <bean id="com1" class="org.raghav.Desktop" lazy-init="true">
 <!--        So in the above line I am saying lazy-init = true which mean only create the object for desktop when I try to get the the object-->

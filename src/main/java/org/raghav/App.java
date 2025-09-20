@@ -18,5 +18,7 @@ public class App
 
         Desktop obj1 = applicationContext.getBean("com1",Desktop.class);
 
+        Computer com = applicationContext.getBean(Computer.class); // we are able to create bean for interface also because when you load the class interface class also get's loaded
+
     }
 }
