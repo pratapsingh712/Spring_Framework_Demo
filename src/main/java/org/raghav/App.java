@@ -13,7 +13,7 @@ public class App
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dt = context.getBean(Desktop.class);
+        Desktop dt = context.getBean("com",Desktop.class);
         dt.compile();
 
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml"); // this line create the container for me and applicationContext is an interface
