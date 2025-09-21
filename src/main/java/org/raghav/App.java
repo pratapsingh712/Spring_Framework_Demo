@@ -13,8 +13,12 @@ public class App
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dt = context.getBean("com",Desktop.class);
+        Desktop dt = context.getBean(Desktop.class); // created desktop object dt
+
+        Desktop dt1 = context.getBean(Desktop.class); // created desktop object dt1 but still we are not creating this object as bean is singleton.
+
         dt.compile();
+        dt1.compile();
 
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml"); // this line create the container for me and applicationContext is an interface
 //        Alien obj = applicationContext.getBean("alien",Alien.class);
