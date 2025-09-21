@@ -14,7 +14,6 @@ public class App
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         Alien obj = context.getBean(Alien.class);
-        obj.setAge(21);
         System.out.println(obj.getAge());
         obj.code();
 
