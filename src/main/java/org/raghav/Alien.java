@@ -14,7 +14,7 @@ public class Alien {
 //    private Laptop lap;
 
     @Autowired
-    @Qualifier("desktop")
+    @Qualifier("laptop")
     private Computer com;
 
     public Alien(){
