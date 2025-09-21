@@ -1,5 +1,7 @@
 package org.raghav;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
@@ -11,6 +13,8 @@ public class Alien {
 //    private Laptop lap = new Laptop(); I don't want to create object by myself so I have set the property in the spring.xml for laptop as ref type
 //    private Laptop lap;
 
+    @Autowired
+    @Qualifier("desktop")
     private Computer com;
 
     public Alien(){
