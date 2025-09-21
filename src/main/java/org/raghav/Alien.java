@@ -1,7 +1,10 @@
 package org.raghav;
 
+import org.springframework.stereotype.Component;
+
 import java.beans.ConstructorProperties;
 
+@Component
 public class Alien {
 
     private int age;

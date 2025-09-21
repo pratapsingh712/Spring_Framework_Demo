@@ -6,37 +6,35 @@ import org.raghav.Desktop;
 import org.raghav.Laptop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
+@ComponentScan("org.raghav")
 public class AppConfig {
 
-    @Bean
+//    @Bean
+////
+////    public Alien alien(@Autowired Computer com)
+//    public Alien alien(Computer com){         //@Qualifier("desktop")
+//        Alien obj = new Alien();
+//        obj.setAge(25);
+//        obj.setCom(com);
+////        obj.setCom(desktop()); // this is tight coupling
+//        return obj;
+//    }
 //
-//    public Alien alien(@Autowired Computer com)
-    public Alien alien(Computer com){         //@Qualifier("desktop")
-        Alien obj = new Alien();
-        obj.setAge(25);
-        obj.setCom(com);
-//        obj.setCom(desktop()); // this is tight coupling
-        return obj;
-    }
-
-
-//    @Bean(name={"computer1","computer2","computer3"})
-    @Bean
-//    @Scope("prototype")
-    public Desktop desktop(){
-        return new Desktop();
-    }
-
-    @Bean
-    @Primary
-    public Laptop laptop(){
-        return new Laptop();
-    }
+//
+////    @Bean(name={"computer1","computer2","computer3"})
+//    @Bean
+////    @Scope("prototype")
+//    public Desktop desktop(){
+//        return new Desktop();
+//    }
+//
+//    @Bean
+//    @Primary
+//    public Laptop laptop(){
+//        return new Laptop();
+//    }
 
 }
